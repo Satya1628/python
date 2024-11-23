@@ -1,9 +1,8 @@
 import pygame
 
-# Initialising pygame module
 pygame.init()
 
-# Setting Width and height of the Chess Game screen
+
 WIDTH = 800
 HEIGHT = 750
 
@@ -17,7 +16,7 @@ big_font = pygame.font.Font('freesansbold.ttf', 50)
 timer = pygame.time.Clock()
 fps = 60
 
-# game variables and images
+
 white_pieces = ['rook', 'knight', 'bishop', 'king', 'queen', 'bishop', 'knight', 'rook',
                 'pawn', 'pawn', 'pawn', 'pawn', 'pawn', 'pawn', 'pawn', 'pawn']
 white_locations = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0),
@@ -30,12 +29,10 @@ black_locations = [(0, 7), (1, 7), (2, 7), (3, 7), (4, 7), (5, 7), (6, 7), (7, 7
 captured_pieces_white = []
 captured_pieces_black = []
 
-# 0 - whites turn no selection: 1-whites turn piece selected: 2- black turn no selection, 3 - black turn piece selected
 turn_step = 0
 selection = 100
 valid_moves = []
 
-# load in game piece images (queen, king, rook, bishop, knight, pawn) x 2
 black_queen = pygame.image.load('./images/black queen.png')
 black_queen = pygame.transform.scale(black_queen, (80, 80))
 black_queen_small = pygame.transform.scale(black_queen, (45, 45))
@@ -85,7 +82,6 @@ small_black_images = [black_pawn_small, black_queen_small, black_king_small, bla
 
 piece_list = ['pawn', 'queen', 'king', 'knight', 'rook', 'bishop']
 
-# check variables/ flashing counter
 counter = 0
 winner = ''
 game_over = False
